@@ -108,16 +108,14 @@ def synchronous():
 
 
 async def aiohttp_get(url, compress=False):
-    print(url)
     async with aiohttp.ClientSession() as session:
         async with session.get(url, compress=compress) as response:
-            print(response.status)
             return await response.text()
 
 
 async def fetch_page_async(letter):
     url = URL.format(letter)
-    with await sem:
+    async with sem:
         page = await aiohttp_get(url, compress=True)
     fighters = process_fighters(page)
     return fighters
