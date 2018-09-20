@@ -1,0 +1,37 @@
+# byte compiled, C extensions, optimised, os and DLL files
+__pycache__/
+.DS_Store
+*.py[cod]
+*.swp
+*.so
+
+# virtualenv
+.virtualenv/
+
+# pip logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# unit tests and coverage reports
+.coverage
+.coverage.*
+coverage.xml
+.cache
+htmlcover/
+nosetests.xml
+
+# translations
+*.mo
+*.po
+
+# local env files
+.env.local
+.env.*.local
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
